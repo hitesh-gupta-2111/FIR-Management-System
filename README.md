@@ -19,40 +19,40 @@ The structure of the database is as follows:
 
 Entities:
 Registration (Avoid duplicate registrations)
-	Criminal
-	Victim
-	Crime
-	Status (Log)
-	Case Incharge
-	Police Officers
-	Suspects
-	Evidence
-	Witness
+	1. Criminal
+	2. Victim
+	3. Crime
+	4. Status (Log)
+	5. Case Incharge
+	6. Police Officers
+	7. Suspects
+	8. Evidence
+	9. Witness
 
 	(when the status changes to ‘case closed’ the victim record has to be removed and one of the suspects has to be moved to the criminal database)
 
-Victim :
-First Name
-Last Name
-Aadhar no.
-Address
-Phone number
+	1.Victim :
+	First Name
+	Last Name
+	Aadhar no.
+	Address
+	Phone number
 
-      2.	Registration:
+      2.Registration:
 	Aadhar no. (Victim)
 	Case Id
 	Crime type
-Description
-Date of crime
-Place of crime
+	Description
+	Date of crime
+	Place of crime
 
-      3.  Criminal
-Criminal Id
-Case Id *(registration)
-First Name
-Last Name
-Address
-Case incharge id*(Police Records)
+      3. Criminal:
+	Criminal Id
+	Case Id *(registration)
+	First Name
+	Last Name
+	Address
+	Case incharge id*(Police Records)
 
       4. Crime:
 	Crime type*(registration)
@@ -62,15 +62,15 @@ Case incharge id*(Police Records)
 	Case Id*(registration)
 	Submitted
 	Fields verified
-Case Incharge appointed
-Progress Description
+	Case Incharge appointed
+	Progress Description
 
      6.  Case Incharge:
 	Case Id*(registration)
 	Case Incharge Id*(Police Records)
 	
 
-     7.  Police Records
+     7.  Police Records:
 	Police ID
 	First Name
 	Last Name
@@ -80,30 +80,30 @@ Progress Description
 	Phone number
 	Aadhar number
 
-    8.  Suspects	
+    8.  Suspects:	
 	Case Id*(registration)
 	First Name
 	Last Name
 	Address
 	Phone number
 	
-    9.  Witness
-Case Id*(registration)
+    9.  Witness:
+	Case Id*(registration)
 	First Name
 	Last Name
 	Address
-Phone number
+	Phone number
 
-    10.  Evidence	
+    10.  Evidence:	
 	Case Id*(registration)
 	Case box number
 	Evidence type
 	
 
-Triggers:
-1 .  Insert into “victim” after insert into “registration” (Aadhar number in registration is updated using cascade)
-2 .  Insert into “Case Incharge” first after addtion of a row into registraiton and then after case incharge appointed of a case id in “status” changes to yes
-3 .  insert row into “crime” after insert into “registration”
-4 .  insert into “criminal” after completed in “status” changes to yes
-5 .  insert into “status” only case id after insert into registration and by default all attributes are set to “NO” initially
+	Triggers:
+	1 .  Insert into “victim” after insert into “registration” (Aadhar number in registration is updated using cascade)
+	2 .  Insert into “Case Incharge” first after addtion of a row into registraiton and then after case incharge appointed of a case 	      id in “status” changes to yes
+	3 .  insert row into “crime” after insert into “registration”
+	4 .  insert into “criminal” after completed in “status” changes to yes
+	5 .  insert into “status” only case id after insert into registration and by default all attributes are set to “NO” initially
 
