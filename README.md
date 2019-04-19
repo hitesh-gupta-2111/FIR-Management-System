@@ -15,37 +15,6 @@ In this project, we have tried to implement an FIR Management System. The front 
 2) Option for a victim to check the status of his case, by using his case-id
 3) A login section which provides the option for login with a username and password to the admin (a police official in this case). After successful login, the user gets redirected to a query page. The query page is form and button page in which we have provided some basic set of queries. The form handling has been done through PHP. We have only included some basic queries which can easily be increased and improved upon if needed. The database on which these queries are based has been made using mySQL. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Front page-
-When we click on “To File an FIR click here”, following sign-up form opens-
-
-
-
-
-
-
-
-And when admin/police enter username & password, the following query page appears-
-
-
 The structure of the database is as follows:
 
 Entities:
@@ -60,7 +29,7 @@ Registration (Avoid duplicate registrations)
 	Evidence
 	Witness
 
-	(when the status changes to ‘case closed’ the victim record has to be removed and one of the suspects has to be moved to the criminal database
+	(when the status changes to ‘case closed’ the victim record has to be removed and one of the suspects has to be moved to the criminal database)
 
 Victim :
 First Name
