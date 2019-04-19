@@ -1,12 +1,12 @@
 # FIR-Management-System
 
 
-Group Member Names-
-Hitesh Gupta (160296)
-Ashish Gupta (160161)
-Sarthak Gupta (160626)
-Rohan Garg (160579)
-Kaveti Dinesh Kumar (160329)
+	Group Member Names-
+	Hitesh Gupta (160296)
+	Ashish Gupta (160161)
+	Sarthak Gupta (160626)
+	Rohan Garg (160579)
+	Kaveti Dinesh Kumar (160329)
 
 
 Introduction :
@@ -18,8 +18,8 @@ In this project, we have tried to implement an FIR Management System. The front 
 The structure of the database is as follows:
 
 Entities:
-Registration (Avoid duplicate registrations)
-	1. Criminal
+	
+	1. Registration (Avoid duplicate registrations)
 	2. Victim
 	3. Crime
 	4. Status (Log)
@@ -28,8 +28,11 @@ Registration (Avoid duplicate registrations)
 	7. Suspects
 	8. Evidence
 	9. Witness
+	10. Criminal
+	
+Details:
 
-	(when the status changes to ‘case closed’ the victim record has to be removed and one of the suspects has to be moved to the criminal database)
+	
 
 	1.Victim :
 	First Name
